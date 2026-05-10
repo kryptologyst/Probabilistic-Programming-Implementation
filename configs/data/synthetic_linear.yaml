@@ -1,0 +1,12 @@
+#@package data
+_target_: src.data.synthetic.generate_linear_data
+
+# Data generation parameters
+n_samples: 100
+n_features: 1
+noise_std: 1.0
+true_slope: 2.0
+true_intercept: 1.0
+x_range: [0, 10]
+test_split: 0.2
+random_seed: 42

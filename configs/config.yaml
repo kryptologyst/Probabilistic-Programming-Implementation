@@ -1,0 +1,25 @@
+# Default configuration for probabilistic programming experiments
+defaults:
+  - _self_
+  - override /model: bayesian_linear_regression
+  - override /data: synthetic_linear
+  - override /training: pyro_vi
+
+# Experiment settings
+experiment:
+  name: "probabilistic_regression"
+  seed: 42
+  device: "auto"  # auto, cpu, cuda, mps
+  
+# Logging
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  use_tensorboard: true
+  use_wandb: false
+
+# Paths
+paths:
+  data_dir: "data"
+  output_dir: "assets"
+  checkpoint_dir: "assets/models"
